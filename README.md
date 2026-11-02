@@ -1,6 +1,11 @@
 # Charles Retail Therapy – E-Commerce Website Development
 
 
+**Live site:** https://tshiamo-mzimande-rosebank-college.github.io/WEDE5020-Charles-Retail-Therapy/  
+**Repository:** https://github.com/Tshiamo-Mzimande-Rosebank-College/WEDE5020-Charles-Retail-Therapy
+
+---
+
 ## 1. Project Title
 **Charles Retail Therapy – Website Development Project**
 
@@ -288,3 +293,113 @@ To take a screenshot in DevTools, set the width, then open the command menu (**C
 
 ## 10. Image Credits
 Product, blog and background photos are free stock images from [Unsplash](https://unsplash.com) (Unsplash License). Smaller `-480.jpg` versions were resized for mobile `srcset`.
+
+
+---
+
+## 11. Part 3 – Functionality, Interactivity and SEO
+
+### 11.1 Pages
+| Page | Purpose |
+|------|---------|
+| `index.html` | Home: hero, brand highlights, new arrivals, testimonials |
+| `about.html` | Brand story, mission and FAQ accordion |
+| `products.html` | Shop: products rendered from a JavaScript array with live search and category filters |
+| `gallery.html` | Photo gallery with a full lightbox |
+| `suppliers.html` | Enquiry form for selling, consigning or donating clothes, with an instant payout estimate |
+| `blog.html` | Style and sustainability articles |
+| `contact.html` | Contact details, contact form and interactive store map |
+
+### 11.2 Interactive features
+- **Responsive hamburger menu** – toggles on mobile, closes on link click, Esc key or resize; `aria-expanded` kept in sync.
+- **Back-to-top button** – appears after scrolling 400px and smooth-scrolls to the top.
+- **Scroll reveal** – cards fade in as they enter the viewport (disabled for users who prefer reduced motion).
+- **FAQ accordion** (About page) – keyboard accessible buttons with `aria-expanded` / `aria-controls`.
+- **Hover effects** on product cards, gallery thumbnails, filter buttons and links.
+
+### 11.3 Interactive map (Contact page)
+Built with **Leaflet 1.9.4** and **OpenStreetMap** tiles. Shows the store at 50 Bath Avenue, Rosebank, Johannesburg with a marker and popup (name, address and a "Get directions" link to Google Maps). Zoom and pan are enabled; scroll-wheel zoom turns on after clicking the map so the page can still scroll. The map is responsive (400px tall on desktop, 300px on mobile) and has a teal border to match the site palette.
+
+### 11.4 Gallery lightbox
+Clicking a thumbnail opens a lightbox with the full-size image, caption and position (e.g. "3 of 12"), previous/next buttons, close button, **Esc** to close, **← / →** arrow keys, and click-outside-to-close. Focus moves into the lightbox and returns to the thumbnail on close. Thumbnails use compressed 480px images with `loading="lazy"`.
+
+### 11.5 Dynamic content and search
+Products are stored in the `PRODUCTS` array in `functions.js` and rendered into the Shop page. The search box filters by name, brand or category as the user types (case-insensitive), category buttons filter by type, a live count shows "Showing X of Y products", and a friendly message appears when nothing matches.
+
+### 11.6 Forms
+**Enquiry form (`suppliers.html`)** – name, email, phone, enquiry type, item category, number of items, preferred date, message and consent checkbox. Every field is validated in JavaScript on blur/input:
+- required fields; name letters only
+- email format
+- South African phone format (`082 123 4567` or `+27 82 123 4567`)
+- number of items 1–200
+- date not in the past and not a Sunday
+- message at least 20 characters
+- consent ticked
+
+Errors show next to each field and invalid fields are highlighted. On a valid submit the page shows a summary with a **calculated estimated payout** (rate per category × quantity × enquiry-type multiplier, plus a 10% bonus for 20+ items) and whether we collect or you drop off. The form then clears.
+
+**Contact form (`contact.html`)** – name, email, phone, subject and message, with the same real-time validation. Submitting shows a "Sending..." loading state, then a success message (or an error message if sending fails).
+
+*Email sending:* the form is ready for [Formspree](https://formspree.io). To turn on real emails:
+1. Create a free Formspree account and a new form.
+2. Copy the form endpoint (e.g. `https://formspree.io/f/abcdwxyz`).
+3. Paste it into `FORMSPREE_ENDPOINT` at the top of the contact form section in `functions.js`.
+
+Until then, sending is simulated so all feedback states still work.
+
+### 11.7 SEO
+- A unique `<title>` (50–60 characters) and meta description (148–159 characters) on every page, including the business name and main keyword.
+- Tailored meta keywords per page (no stuffing), an author meta tag and Open Graph tags.
+- `lang="en"`, viewport meta, semantic `header`/`nav`/`main`/`section`/`footer`, and exactly one `<h1>` per page.
+- Descriptive hyphenated image file names (e.g. `gucci-handbag.jpg`, `leather-jacket-480.jpg`) and meaningful alt text on every image.
+
+### 11.8 Technologies
+HTML5, CSS3 (custom properties, Grid, Flexbox), vanilla JavaScript (ES5+), Leaflet.js, OpenStreetMap, Google Fonts, Git and GitHub Pages.
+
+## 12. Setup and Running Locally
+1. Clone the repository: `git clone https://github.com/Tshiamo-Mzimande-Rosebank-College/WEDE5020-Charles-Retail-Therapy.git`
+2. Open the folder and double-click `index.html`, or run a local server (e.g. VS Code Live Server, or `python3 -m http.server`) and go to `http://localhost:8000`.
+3. No build step or install is needed.
+
+## 13. Deployment (GitHub Pages)
+The site is published from the `main` branch root with GitHub Pages: **Settings → Pages → Source: Deploy from a branch → main / (root)**. Live URL: https://tshiamo-mzimande-rosebank-college.github.io/WEDE5020-Charles-Retail-Therapy/
+
+## 14. Changelog
+| Date | Change |
+|------|--------|
+| 21 Aug 2026 | Part 1: project proposal, goals, sitemap and wireframes |
+| 25 Sep 2026 | Part 2: external stylesheet, colour palette, typography, responsive layouts and screenshots |
+| 2 Nov 2026 | Part 3: SEO titles, descriptions, keywords, Open Graph tags and one `h1` per page |
+| 2 Nov 2026 | Part 3: new Gallery page and styles for interactive features |
+| 2 Nov 2026 | Part 3: hamburger navigation, back-to-top button, scroll reveal and FAQ accordion |
+| 2 Nov 2026 | Part 3: products rendered from a JavaScript array with live search and category filters |
+| 2 Nov 2026 | Part 3: gallery lightbox with keyboard navigation |
+| 2 Nov 2026 | Part 3: Leaflet/OpenStreetMap store map with marker and directions popup |
+| 2 Nov 2026 | Part 3: enquiry form with full validation and payout estimate |
+| 2 Nov 2026 | Part 3: contact form with validation, sending state and Formspree support |
+| 2 Nov 2026 | Part 3: README documentation, references and GitHub Pages deployment |
+
+## 15. References
+Agafonkin, V. (2023) *Leaflet: an open-source JavaScript library for mobile-friendly interactive maps* (Version 1.9.4). Available at: https://leafletjs.com (Accessed: 2 November 2026).
+
+Anthropic (2026) *Claude Code* [AI coding assistant]. Available at: https://claude.com/claude-code (Accessed: 2 November 2026). Used to help implement JavaScript interactivity, SEO tags and documentation.
+
+Formspree (2026) *Formspree documentation*. Available at: https://help.formspree.io (Accessed: 2 November 2026).
+
+GitHub (2026) *GitHub Pages documentation*. Available at: https://docs.github.com/en/pages (Accessed: 2 November 2026).
+
+Google (2026) *Google Fonts: Playfair Display, Montserrat and Open Sans*. Available at: https://fonts.google.com (Accessed: 2 November 2026).
+
+Google (2026) *Search Central: SEO starter guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
+
+MDN Web Docs (2026) *Client-side form validation*. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation (Accessed: 2 November 2026).
+
+OpenStreetMap contributors (2026) *OpenStreetMap*. Available at: https://www.openstreetmap.org/copyright (Accessed: 2 November 2026).
+
+Unsplash (2026) *Free stock photographs used for product, gallery and background images* (Unsplash License). Available at: https://unsplash.com (Accessed: 25 September 2026).
+
+W3Schools (2026) *How to – lightbox (modal image gallery)*. Available at: https://www.w3schools.com/howto/howto_js_lightbox.asp (Accessed: 2 November 2026).
+
+## 16. Author
+**Tshiamo Mzimande** – ST10505753, Rosebank College – WEDE5020  
+GitHub: https://github.com/Tshiamo-Mzimande-Rosebank-College
