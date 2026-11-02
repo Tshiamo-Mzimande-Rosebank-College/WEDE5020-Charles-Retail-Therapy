@@ -375,3 +375,65 @@ function initEnquiryForm() {
         resetValidation(form);
     });
 }
+
+/* ---------- Contact form ---------- */
+// To send real emails, create a free form at https://formspree.io and paste
+// its endpoint here, e.g. 'https://formspree.io/f/abcdwxyz'.
+// While empty, sending is simulated so the form still gives full feedback.
+var FORMSPREE_ENDPOINT = '';
+
+function initContactForm() {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var feedback = document.getElementById('contact-feedback');
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    var validateAll = setupValidation(form, {
+        'contact-name': 'name', 'contact-email': 'email', 'contact-phone': 'phone',
+        'subject': 'select', 'contact-message': 'message'
+    });
+
+    function send(data) {
+        if (!FORMSPREE_ENDPOINT) {
+            return new Promise(function (resolve) { setTimeout(resolve, 1200); });
+        }
+        return fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data
+        }).then(function (res) {
+            if (!res.ok) throw new Error('Request failed');
+        });
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validateAll()) {
+            feedback.className = 'form-feedback error';
+            feedback.textContent = 'Please fix the highlighted fields before sending.';
+            feedback.hidden = false;
+            return;
+        }
+
+        var name = form.name.value.trim();
+        var subject = form.subject.value;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        feedback.hidden = true;
+
+        send(new FormData(form)).then(function () {
+            feedback.className = 'form-feedback success';
+            feedback.innerHTML = '<strong>Thanks, ' + escapeHTML(name) + '!</strong> Your message about &ldquo;' +
+                escapeHTML(subject) + '&rdquo; has been sent. We reply within 24 hours on weekdays.';
+            resetValidation(form);
+        }).catch(function () {
+            feedback.className = 'form-feedback error';
+            feedback.innerHTML = 'Sorry, your message could not be sent. Please try again or email us at ' +
+                '<a href="mailto:hello@charlesretail.co.za">hello@charlesretail.co.za</a>.';
+        }).finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+            feedback.hidden = false;
+        });
+    });
+}
