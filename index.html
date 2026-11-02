@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Retail Therapy - Premium Second-Hand Fashion</title>
+    <!-- Google Fonts: Playfair Display (headings), Montserrat (subheadings), Open Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <script src="functions.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html" class="logo-link">CHARLES RETAIL THERAPY</a></h1>
+            </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="sr-only">Open menu</span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Shop</a></li>
+                    <li><a href="suppliers.html" class="nav-link">Suppliers</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="products.html" class="search-icon" aria-label="Search products"><span aria-hidden="true">&#128269;</span></a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Style with purpose.<br>Shop with confidence.</h2>
+                <p>Premium pre-loved and outlet fashion from top brands at amazing prices.</p>
+                <div class="hero-actions">
+                    <a href="products.html" class="btn-primary">Shop Now</a>
+                    <a href="suppliers.html" class="btn-secondary">Sell With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container features-grid">
+            <div class="feature-item">
+                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                <h3>Crafted Brands</h3>
+                <p>Authentic designer pieces</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                <h3>Quality Checked</h3>
+                <p>All items verified</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                <h3>Sustainable Fashion</h3>
+                <p>Eco-friendly shopping</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                <h3>Nationwide Delivery</h3>
+                <p>Fast shipping across SA</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-brands">
+        <div class="container">
+            <h2>FEATURED BRANDS</h2>
+            <div class="brand-grid">
+                <div class="brand-item">NIKE</div>
+                <div class="brand-item">GUCCI</div>
+                <div class="brand-item">LEVI'S</div>
+                <div class="brand-item">ZARA</div>
+                <div class="brand-item">COACH</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-arrivals">
+        <div class="container">
+            <h2>NEW ARRIVALS</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="images/nike-jacket.jpg" srcset="images/nike-jacket-480.jpg 480w, images/nike-jacket.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Rust-coloured bomber jacket on a hanger" width="900" height="1200" loading="lazy">
+                        <span class="image-tag">VINTAGE</span>
+                    </div>
+                    <h4>Nike Jacket</h4>
+                    <p class="price">R899</p>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="images/gucci-handbag.jpg" srcset="images/gucci-handbag-480.jpg 480w, images/gucci-handbag.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Black quilted Gucci crossbody bag with gold chain" width="900" height="601" loading="lazy">
+                        <span class="image-tag">PREMIUM</span>
+                    </div>
+                    <h4>Gucci Handbag</h4>
+                    <p class="price">R1,299</p>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="images/sneakers.jpg" srcset="images/sneakers-480.jpg 480w, images/sneakers.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Red running sneaker on a red background" width="900" height="600" loading="lazy">
+                        <span class="image-tag">ORIGINAL</span>
+                    </div>
+                    <h4>Adidas Sneakers</h4>
+                    <p class="price">R799</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>WHAT OUR CUSTOMERS SAY</h2>
+            <div class="testimonial-grid">
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-quote">
+                        <p>I found a Levi's jacket in perfect condition for a fraction of the retail price. Delivery to Durban took two days.</p>
+                    </blockquote>
+                    <figcaption class="testimonial-author">Student, Durban</figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-quote">
+                        <p>Every item I have bought has matched its condition description. It is my go-to for work outfits now.</p>
+                    </blockquote>
+                    <figcaption class="testimonial-author">Young professional, Johannesburg</figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-quote">
+                        <p>I love that my shopping keeps good clothes out of landfill. Great brands, fair prices.</p>
+                    </blockquote>
+                    <figcaption class="testimonial-author">Customer, Cape Town</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container benefits-grid">
+            <div class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">&#128666;</span>
+                <p>Free Shipping on orders over R999</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">&#128260;</span>
+                <p>Easy Returns</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">&#128274;</span>
+                <p>Secure Payments</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">&#128172;</span>
+                <p>24/7 Support</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Premium second-hand fashion for students and young professionals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="suppliers.html">Suppliers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@charlesretail.co.za</p>
+                    <p>+27 11 123 4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <span>Facebook</span>
+                        <span>Instagram</span>
+                        <span>TikTok</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Charles Retail Therapy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

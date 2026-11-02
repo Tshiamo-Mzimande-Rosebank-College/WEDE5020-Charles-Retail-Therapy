@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers - Charles Retail Therapy</title>
+    <!-- Google Fonts: Playfair Display (headings), Montserrat (subheadings), Open Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <script src="functions.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html" class="logo-link">CHARLES RETAIL THERAPY</a></h1>
+            </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="sr-only">Open menu</span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Shop</a></li>
+                    <li><a href="suppliers.html" class="nav-link active" aria-current="page">Suppliers</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="products.html" class="search-icon" aria-label="Search products"><span aria-hidden="true">&#128269;</span></a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Partner With Charles Retail Therapy</h2>
+            <p>We work with trusted suppliers who share our values of quality, authenticity and sustainability.</p>
+        </div>
+    </section>
+
+    <section class="suppliers-content">
+        <div class="container">
+            <div class="suppliers-grid">
+                <div class="suppliers-info">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="images/clothes-rail-480.jpg">
+                        <img class="section-image" src="images/clothes-rail.jpg" alt="Pre-loved clothes hanging on a simple rail" width="900" height="600" loading="lazy">
+                    </picture>
+                    <h3>Why Partner With Us</h3>
+                    <p>We partner with individuals who wish to donate or sell their pre-loved designer items. Your contributions help us make premium fashion accessible to everyone.</p>
+                    
+                    <h3>Benefits for Suppliers</h3>
+                    <ul>
+                        <li><strong>Wider Market Reach</strong> - Connect with thousands of customers across South Africa</li>
+                        <li><strong>Fair Pricing</strong> - Receive competitive rates for your quality items</li>
+                        <li><strong>Sustainable Impact</strong> - Contribute to reducing textile waste</li>
+                        <li><strong>Support Young People</strong> - Help students and young professionals access premium fashion</li>
+                    </ul>
+                </div>
+                <div class="suppliers-form">
+                    <h3>Supplier Enquiry Form</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="items">Items / Categories You Supply</label>
+                            <textarea id="items" name="items" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Premium second-hand fashion for students and young professionals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="suppliers.html">Suppliers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@charlesretail.co.za</p>
+                    <p>+27 11 123 4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <span>Facebook</span>
+                        <span>Instagram</span>
+                        <span>TikTok</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Charles Retail Therapy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

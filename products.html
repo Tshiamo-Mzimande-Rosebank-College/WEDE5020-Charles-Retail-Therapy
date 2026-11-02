@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Charles Retail Therapy</title>
+    <!-- Google Fonts: Playfair Display (headings), Montserrat (subheadings), Open Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <script src="functions.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html" class="logo-link">CHARLES RETAIL THERAPY</a></h1>
+            </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="sr-only">Open menu</span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+                <span class="hamburger-bar" aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link active" aria-current="page">Shop</a></li>
+                    <li><a href="suppliers.html" class="nav-link">Suppliers</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="products.html" class="search-icon" aria-label="Search products"><span aria-hidden="true">&#128269;</span></a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Shop All Products</h2>
+            <p>Browse our collection of premium second-hand fashion</p>
+        </div>
+    </section>
+
+    <section class="shop-content">
+        <div class="container">
+            <div class="shop-layout">
+                <aside class="filters">
+                    <div class="filter-section">
+                        <h4>Search Products</h4>
+                        <label for="product-search" class="sr-only">Search products</label>
+                        <input type="search" id="product-search" placeholder="Search products..." class="search-input">
+                    </div>
+                    <div class="filter-section">
+                        <h4>By Brand</h4>
+                        <ul>
+                            <li><a href="#">Nike</a></li>
+                            <li><a href="#">Gucci</a></li>
+                            <li><a href="#">Levi's</a></li>
+                            <li><a href="#">Zara</a></li>
+                            <li><a href="#">Coach</a></li>
+                            <li><a href="#">Adidas</a></li>
+                            <li><a href="#">View All</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-section">
+                        <h4>By Product Type</h4>
+                        <ul>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">Jeans</a></li>
+                            <li><a href="#">Handbags</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">View All</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="product-display">
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-image">
+                        <img src="images/nike-jacket.jpg" srcset="images/nike-jacket-480.jpg 480w, images/nike-jacket.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Rust-coloured bomber jacket on a hanger" width="900" height="1200" loading="lazy">
+                        <span class="image-tag">VINTAGE</span>
+                    </div>
+                            <h4>Nike Jacket</h4>
+                            <p class="brand">Nike</p>
+                            <p class="price">R899</p>
+                            <a href="#" class="btn-small">Add to Cart</a>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image">
+                        <img src="images/gucci-handbag.jpg" srcset="images/gucci-handbag-480.jpg 480w, images/gucci-handbag.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Black quilted Gucci crossbody bag with gold chain" width="900" height="601" loading="lazy">
+                        <span class="image-tag">PREMIUM</span>
+                    </div>
+                            <h4>Gucci Handbag</h4>
+                            <p class="brand">Gucci</p>
+                            <p class="price">R1,299</p>
+                            <a href="#" class="btn-small">Add to Cart</a>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image">
+                        <img src="images/sneakers.jpg" srcset="images/sneakers-480.jpg 480w, images/sneakers.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Red running sneaker on a red background" width="900" height="600" loading="lazy">
+                        <span class="image-tag">ORIGINAL</span>
+                    </div>
+                            <h4>Adidas Sneakers</h4>
+                            <p class="brand">Adidas</p>
+                            <p class="price">R799</p>
+                            <a href="#" class="btn-small">Add to Cart</a>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image">
+                        <img src="images/levis-jeans.jpg" srcset="images/levis-jeans-480.jpg 480w, images/levis-jeans.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Three pairs of folded Levi's jeans" width="900" height="720" loading="lazy">
+                        <span class="image-tag">CLASSIC</span>
+                    </div>
+                            <h4>Levi's Jeans</h4>
+                            <p class="brand">Levi's</p>
+                            <p class="price">R650</p>
+                            <a href="#" class="btn-small">Add to Cart</a>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image">
+                        <img src="images/coach-bag.jpg" srcset="images/coach-bag-480.jpg 480w, images/coach-bag.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Red leather top-handle handbag" width="900" height="1200" loading="lazy">
+                        <span class="image-tag">LUXURY</span>
+                    </div>
+                            <h4>Coach Bag</h4>
+                            <p class="brand">Coach</p>
+                            <p class="price">R950</p>
+                            <a href="#" class="btn-small">Add to Cart</a>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image">
+                        <img src="images/puma-tshirt.jpg" srcset="images/puma-tshirt-480.jpg 480w, images/puma-tshirt.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Man wearing a plain white T-shirt" width="900" height="900" loading="lazy">
+                        <span class="image-tag">SPORT</span>
+                    </div>
+                            <h4>Puma T-Shirt</h4>
+                            <p class="brand">Puma</p>
+                            <p class="price">R350</p>
+                            <a href="#" class="btn-small">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Premium second-hand fashion for students and young professionals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="suppliers.html">Suppliers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@charlesretail.co.za</p>
+                    <p>+27 11 123 4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <span>Facebook</span>
+                        <span>Instagram</span>
+                        <span>TikTok</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Charles Retail Therapy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
