@@ -80,28 +80,65 @@
                 </div>
                 <div class="suppliers-form">
                     <h3>Supplier Enquiry Form</h3>
-                    <form>
+                    <form id="enquiry-form" novalidate>
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+                            <span class="error-message" id="name-error" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                            <span class="error-message" id="email-error" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Phone Number <span class="required" aria-hidden="true">*</span></label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. 082 123 4567" required aria-describedby="phone-error">
+                            <span class="error-message" id="phone-error" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="items">Items / Categories You Supply</label>
-                            <textarea id="items" name="items" rows="4"></textarea>
+                            <label for="enquiry-type">Enquiry Type <span class="required" aria-hidden="true">*</span></label>
+                            <select id="enquiry-type" name="enquiryType" required aria-describedby="enquiry-type-error">
+                                <option value="">-- Please choose --</option>
+                                <option value="sell">Sell my items</option>
+                                <option value="consign">Consign (sell on commission)</option>
+                                <option value="donate">Donate my items</option>
+                                <option value="bulk">Bulk / wholesale supply</option>
+                            </select>
+                            <span class="error-message" id="enquiry-type-error" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="message">Additional Message</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="category">Main Item Category <span class="required" aria-hidden="true">*</span></label>
+                            <select id="category" name="category" required aria-describedby="category-error">
+                                <option value="">-- Please choose --</option>
+                                <option value="designer">Designer bags &amp; accessories</option>
+                                <option value="jackets">Jackets &amp; outerwear</option>
+                                <option value="sportswear">Sportswear &amp; sneakers</option>
+                                <option value="everyday">Everyday clothing</option>
+                            </select>
+                            <span class="error-message" id="category-error" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Number of Items <span class="required" aria-hidden="true">*</span></label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="200" required aria-describedby="quantity-error">
+                            <span class="error-message" id="quantity-error" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="drop-off-date">Preferred Drop-off / Collection Date <span class="required" aria-hidden="true">*</span></label>
+                            <input type="date" id="drop-off-date" name="date" required aria-describedby="drop-off-date-error">
+                            <span class="error-message" id="drop-off-date-error" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Describe Your Items <span class="required" aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="4" required aria-describedby="message-error" placeholder="Brands, sizes and condition"></textarea>
+                            <span class="error-message" id="message-error" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label for="consent"><input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error"> I agree that Charles Retail Therapy may contact me about this enquiry.</label>
+                            <span class="error-message" id="consent-error" aria-live="polite"></span>
                         </div>
                         <button type="submit" class="btn-primary">Submit Enquiry</button>
+                        <div class="form-feedback" id="enquiry-feedback" role="status" aria-live="polite" hidden></div>
                     </form>
                 </div>
             </div>

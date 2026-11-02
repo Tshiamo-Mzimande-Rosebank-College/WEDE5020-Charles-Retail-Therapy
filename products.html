@@ -64,97 +64,26 @@
             <div class="shop-layout">
                 <aside class="filters">
                     <div class="filter-section">
-                        <h4>Search Products</h4>
-                        <label for="product-search" class="sr-only">Search products</label>
-                        <input type="search" id="product-search" placeholder="Search products..." class="search-input">
+                        <h2 class="h4">Search Products</h2>
+                        <label for="product-search" class="sr-only">Search products by name, brand or category</label>
+                        <input type="search" id="product-search" placeholder="Try &quot;nike&quot; or &quot;bag&quot;..." class="search-input" autocomplete="off">
                     </div>
                     <div class="filter-section">
-                        <h4>By Brand</h4>
-                        <ul>
-                            <li><a href="#">Nike</a></li>
-                            <li><a href="#">Gucci</a></li>
-                            <li><a href="#">Levi's</a></li>
-                            <li><a href="#">Zara</a></li>
-                            <li><a href="#">Coach</a></li>
-                            <li><a href="#">Adidas</a></li>
-                            <li><a href="#">View All</a></li>
-                        </ul>
-                    </div>
-                    <div class="filter-section">
-                        <h4>By Product Type</h4>
-                        <ul>
-                            <li><a href="#">Jackets</a></li>
-                            <li><a href="#">Jeans</a></li>
-                            <li><a href="#">Handbags</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Shirts</a></li>
-                            <li><a href="#">T-Shirts</a></li>
-                            <li><a href="#">View All</a></li>
-                        </ul>
+                        <h2 class="h4">Category</h2>
+                        <div class="category-filters" role="group" aria-label="Filter by category">
+                            <button type="button" class="filter-btn is-active" data-category="all" aria-pressed="true">All</button>
+                            <button type="button" class="filter-btn" data-category="Jackets" aria-pressed="false">Jackets</button>
+                            <button type="button" class="filter-btn" data-category="Bags" aria-pressed="false">Bags</button>
+                            <button type="button" class="filter-btn" data-category="Shoes" aria-pressed="false">Shoes</button>
+                            <button type="button" class="filter-btn" data-category="Denim" aria-pressed="false">Denim</button>
+                            <button type="button" class="filter-btn" data-category="Tops" aria-pressed="false">Tops</button>
+                        </div>
                     </div>
                 </aside>
                 <div class="product-display">
-                    <div class="product-grid">
-                        <div class="product-item">
-                            <div class="product-image">
-                        <img src="images/nike-jacket.jpg" srcset="images/nike-jacket-480.jpg 480w, images/nike-jacket.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Rust-coloured bomber jacket on a hanger" width="900" height="1200" loading="lazy">
-                        <span class="image-tag">VINTAGE</span>
-                    </div>
-                            <h4>Nike Jacket</h4>
-                            <p class="brand">Nike</p>
-                            <p class="price">R899</p>
-                            <a href="#" class="btn-small">Add to Cart</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-image">
-                        <img src="images/gucci-handbag.jpg" srcset="images/gucci-handbag-480.jpg 480w, images/gucci-handbag.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Black quilted Gucci crossbody bag with gold chain" width="900" height="601" loading="lazy">
-                        <span class="image-tag">PREMIUM</span>
-                    </div>
-                            <h4>Gucci Handbag</h4>
-                            <p class="brand">Gucci</p>
-                            <p class="price">R1,299</p>
-                            <a href="#" class="btn-small">Add to Cart</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-image">
-                        <img src="images/sneakers.jpg" srcset="images/sneakers-480.jpg 480w, images/sneakers.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Red running sneaker on a red background" width="900" height="600" loading="lazy">
-                        <span class="image-tag">ORIGINAL</span>
-                    </div>
-                            <h4>Adidas Sneakers</h4>
-                            <p class="brand">Adidas</p>
-                            <p class="price">R799</p>
-                            <a href="#" class="btn-small">Add to Cart</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-image">
-                        <img src="images/levis-jeans.jpg" srcset="images/levis-jeans-480.jpg 480w, images/levis-jeans.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Three pairs of folded Levi's jeans" width="900" height="720" loading="lazy">
-                        <span class="image-tag">CLASSIC</span>
-                    </div>
-                            <h4>Levi's Jeans</h4>
-                            <p class="brand">Levi's</p>
-                            <p class="price">R650</p>
-                            <a href="#" class="btn-small">Add to Cart</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-image">
-                        <img src="images/coach-bag.jpg" srcset="images/coach-bag-480.jpg 480w, images/coach-bag.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Red leather top-handle handbag" width="900" height="1200" loading="lazy">
-                        <span class="image-tag">LUXURY</span>
-                    </div>
-                            <h4>Coach Bag</h4>
-                            <p class="brand">Coach</p>
-                            <p class="price">R950</p>
-                            <a href="#" class="btn-small">Add to Cart</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-image">
-                        <img src="images/puma-tshirt.jpg" srcset="images/puma-tshirt-480.jpg 480w, images/puma-tshirt.jpg 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Man wearing a plain white T-shirt" width="900" height="900" loading="lazy">
-                        <span class="image-tag">SPORT</span>
-                    </div>
-                            <h4>Puma T-Shirt</h4>
-                            <p class="brand">Puma</p>
-                            <p class="price">R350</p>
-                            <a href="#" class="btn-small">Add to Cart</a>
-                        </div>
+                    <p class="results-count" id="results-count" aria-live="polite"></p>
+                    <div class="product-grid" id="product-grid">
+                        <noscript><p>Please enable JavaScript to view our products.</p></noscript>
                     </div>
                 </div>
             </div>

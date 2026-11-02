@@ -1695,3 +1695,5 @@ form .btn-primary {
 .form-feedback.error { background: #fff0f0; border-left: 5px solid var(--color-accent-dark); }
 .form-feedback ul { margin: 0.5rem 0 0 1.2rem; }
 button[disabled] { opacity: 0.7; cursor: progress; }
+
+.filter-section .h4 { font-size: 1rem; font-family: var(--font-subheading); margin-bottom: var(--space-xs); }
