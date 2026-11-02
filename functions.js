@@ -213,3 +213,25 @@ function initLightbox() {
         else if (e.key === 'ArrowRight') show(current + 1);
     });
 }
+
+/* ---------- Interactive Leaflet map ---------- */
+function initMap() {
+    var mapEl = document.getElementById('store-map');
+    if (!mapEl || typeof L === 'undefined') return;
+    var store = [-26.1456, 28.0430]; // 50 Bath Avenue, Rosebank, Johannesburg
+
+    var map = L.map(mapEl, { scrollWheelZoom: false }).setView(store, 16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker(store).addTo(map).bindPopup(
+        '<strong>Charles Retail Therapy</strong><br>50 Bath Avenue, Rosebank<br>Johannesburg, 2196<br>' +
+        '<a href="https://www.google.com/maps/dir/?api=1&destination=' + store.join(',') + '" target="_blank" rel="noopener">Get directions</a>'
+    ).openPopup();
+
+    // Only zoom with the scroll wheel once the user has clicked the map
+    map.on('click', function () { map.scrollWheelZoom.enable(); });
+    map.on('mouseout', function () { map.scrollWheelZoom.disable(); });
+}
