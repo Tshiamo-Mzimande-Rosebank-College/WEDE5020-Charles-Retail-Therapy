@@ -164,3 +164,52 @@ function initProducts() {
     });
     render();
 }
+
+/* ---------- Gallery lightbox ---------- */
+function initLightbox() {
+    var lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    var thumbs = Array.prototype.slice.call(document.querySelectorAll('.gallery-thumb'));
+    var image = lightbox.querySelector('.lightbox-image');
+    var caption = lightbox.querySelector('.lightbox-caption');
+    var closeBtn = lightbox.querySelector('.lightbox-close');
+    var current = 0;
+    var lastFocused = null;
+
+    function show(index) {
+        current = (index + thumbs.length) % thumbs.length;
+        var thumb = thumbs[current];
+        image.src = thumb.dataset.full;
+        image.alt = thumb.querySelector('img').alt;
+        caption.textContent = thumb.dataset.caption + ' (' + (current + 1) + ' of ' + thumbs.length + ')';
+    }
+    function open(index) {
+        lastFocused = document.activeElement;
+        show(index);
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+    }
+    function close() {
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+    }
+
+    thumbs.forEach(function (thumb, i) {
+        thumb.addEventListener('click', function () { open(i); });
+    });
+    closeBtn.addEventListener('click', close);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', function () { show(current - 1); });
+    lightbox.querySelector('.lightbox-next').addEventListener('click', function () { show(current + 1); });
+    // Clicking the dark backdrop (not the image or buttons) closes the viewer
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) close();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (lightbox.hidden) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(current - 1);
+        else if (e.key === 'ArrowRight') show(current + 1);
+    });
+}
